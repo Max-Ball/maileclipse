@@ -7,10 +7,8 @@ import Navbar from './components/Navbar.vue'
   <header>
     <Navbar />
   </header>
-  <div class="container-fluid">
-    <div class="row">
-      <RouterView />
-    </div>
+  <div class="main-app">
+    <RouterView />
   </div>
 </template>
 

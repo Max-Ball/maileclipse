@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // @ts-ignore
-import HomeView from '../views/HomeView.vue'
+import Mailables from '../views/Mailables.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'Mailables',
+    component: Mailables
   },
 ]
 const router = createRouter({

@@ -1,5 +1,19 @@
-@import './base.css';
+/* @import './base.css'; */
 @import "bootstrap";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+
+}
+
+.bg-suds {
+  background-color: rgba(27, 225, 242, 1);
+}
+
+.text-suds {
+  color: rgba(27, 225, 242, 1);
+}
