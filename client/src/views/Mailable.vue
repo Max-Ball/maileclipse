@@ -34,8 +34,31 @@
 
 
 
-<script setup>
+<script>
+import { onMounted } from 'vue';
+import { mailablesService } from '../../services/MailableService';
 import MailableModal from '../components/MailableModal.vue';
+
+export default {
+  setup() {
+    async function getAllMailables() {
+      try {
+        await mailablesService.getAllMailables()
+      } catch (error) {
+        console.log("[getting mailables error]");
+      }
+    }
+
+    onMounted(() => {
+      getAllMailables();
+    })
+    return {
+
+    }
+  },
+  components: { MailableModal }
+}
+
 
 
 

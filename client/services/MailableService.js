@@ -4,7 +4,9 @@ import { api } from "./AxiosService";
 class MailableService {
 
   async getAllMailables() {
-    const res = await api.get()
+    console.log('getting');
+    const res = await api.get('/api')
+    console.log('what about here?');
     store.mailables = res.data
   }
 }
