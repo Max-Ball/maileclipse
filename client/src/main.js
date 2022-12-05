@@ -3,6 +3,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { registerGlobalComponents } from './registerGlobalComponents'
+import 'bootstrap'
 
 import './assets/main.css'
 
