@@ -1,7 +1,7 @@
 <template>
   <div class="modal fade" id="mailableModal" tabindex="-1">
     <div class="modal-dialog modal-md">
-      <form id="create_mailable" method="POST">
+      <form id="create-mailable" method="POST">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="mailableModalLabel">New Mailable</h1>
@@ -13,18 +13,18 @@
             </div>
             <div class="form-group">
               <label for="mailableName" class="pb-2">Name</label>
-              <input type="text" class="form-control" id="mailableName" name="name" placeholder="Mailable name"
-                required>
+              <input v-model="editable.name" type="text" class="form-control" id="mailableName" name="name"
+                placeholder="Mailable name" required>
               <small class="form-text text-muted text-xs">Enter mailable name e.g <b>Welcome User</b>,
                 <b>WelcomeUser</b></small>
             </div>
             <div class="form-group mt-3">
               <label class="checkbox-inline mb-3">
-                <input type="checkbox" id="markdown--truth" value="option1"> Markdown Template<br>
+                <input v-model="editable.markdown" type="checkbox" value="option1"> Markdown Template<br>
                 <small class="form-text text-muted text-xs">Use markdown template</small>
               </label>
             </div>
-            <div class="form-group markdown-input" style="display: none;">
+            <div class="form-group d-none">
               <label for="markdownView">Markdown</label>
               <input type="text" class="form-control" name="markdown" id="markdownView" placeholder="e.g markdown.view">
             </div>
@@ -49,13 +49,18 @@
 
 
 <script>
+import { ref } from 'vue';
+
+
 export default {
-
   setup() {
+    const editable = ref({})
+    return {
+      editable,
 
-    return {};
-  },
-};
+    }
+  }
+}
 </script>
 
 
