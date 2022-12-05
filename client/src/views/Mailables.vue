@@ -6,7 +6,7 @@
       <div class="px-3 py-2">
         <div class="flex items-center justify-between">
           <span class="text-xl">Mailables</span>
-          <button type="button" class="btn bg-suds" data-bs-toggle="modal" data-bs-target="#mailableModal">Add
+          <button class="btn bg-suds font-semibold" data-bs-toggle="modal" data-bs-target="#mailableModal">Add
             Mailable</button>
           <MailableModal />
         </div>
