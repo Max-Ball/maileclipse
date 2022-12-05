@@ -14,7 +14,7 @@
           Mailables
         </span>
       </router-link>
-      <router-link :to="{ name: 'Mailables' }"
+      <router-link :to="{ name: 'Templates' }"
         class="flex items-center hover:bg-black/30 p-2 rounded transition-colors">
         <span class="mr-3 text-suds">
           <RectangleGroupIcon class="w-6" />
@@ -23,7 +23,7 @@
           Templates
         </span>
       </router-link>
-      <router-link :to="{ name: 'Mailables' }"
+      <a href="https://www.github.com/max-ball/laravel-mail-editor" target=" _blank"
         class="flex items-center hover:bg-black/30 p-2 rounded transition-colors">
         <span class="mr-3 text-suds">
           <QuestionMarkCircleIcon class="w-6" />
@@ -31,7 +31,7 @@
         <span class="text-md">
           Help
         </span>
-      </router-link>
+      </a>
     </div>
 
   </nav>
