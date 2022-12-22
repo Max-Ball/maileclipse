@@ -18,7 +18,7 @@ const routes = [
     component: Templates
   },
   {
-    path: '/templates/add',
+    path: '/templates/new',
     name: 'NewTemplates',
     component: AddTemplates
   },
