@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'MailablesController@toMailablesList');
+Route::get('/maileclipse', 'MailablesController@toMailablesList');
+
+
 
 Route::group(['prefix' => 'templates'], function () {
     Route::get('/', 'TemplatesController@index')->name('templateList');

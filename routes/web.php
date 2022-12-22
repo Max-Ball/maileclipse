@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'MailablesController@toMailablesList');
+Route::get('/maileclipse', 'MailablesController@toMailablesList')->middleware("cors");
 
 Route::group(['prefix' => 'templates'], function () {
     Route::get('/', 'TemplatesController@index')->name('templateList');

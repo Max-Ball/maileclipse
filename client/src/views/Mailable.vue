@@ -36,7 +36,7 @@
 
 <script>
 import { onMounted } from 'vue';
-import { mailablesService } from '../../services/MailableService';
+import { mailablesService } from '../services/MailableService';
 import MailableModal from '../components/MailableModal.vue';
 
 export default {

@@ -1,11 +1,13 @@
-import { store } from "../src/store";
+import { store } from "../store";
 import { api } from "./AxiosService";
+
 
 class MailableService {
 
+
   async getAllMailables() {
     console.log('getting');
-    const res = await api.get('/api')
+    const res = await api.get('maileclipse/mailables')
     console.log('what about here?');
     store.mailables = res.data
   }
