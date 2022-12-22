@@ -62,7 +62,7 @@ export default {
 
       async createMailable() {
         try {
-          await mailablesService.createMailable()
+          await mailablesService.createMailable(editable.value)
         } catch (error) {
           console.log("[creating mailables error]");
         }

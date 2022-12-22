@@ -9,11 +9,14 @@ class MailableService {
     const res = await api.get('maileclipse/mailables')
     console.log('what about here?');
     store.mailables = res.data
+    console.log(res.data);
   }
-  async createMailable() {
+
+  async createMailable(newMailable) {
     console.log('creating mailable');
     const res = await api.post('maileclipse/mailables/new', newMailable)
-    store.mailables = res.data
+    store.mailables.unshift(res.data)
+    console.log(res.data);
   }
 }
 
