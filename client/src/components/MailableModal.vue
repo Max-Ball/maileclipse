@@ -1,7 +1,7 @@
 <template>
   <div class="modal fade" id="mailableModal" tabindex="-1">
     <div class="modal-dialog modal-md">
-      <form id="create-mailable" method="POST">
+      <form @submit.prevent="createMailable()" id="create-mailable" method="POST">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="mailableModalLabel">New Mailable</h1>
@@ -50,13 +50,23 @@
 
 <script>
 import { ref } from 'vue';
+import { mailablesService } from '../services/MailableService';
 
 
 export default {
   setup() {
     const editable = ref({})
+
     return {
       editable,
+
+      async createMailable() {
+        try {
+          await mailablesService.createMailable()
+        } catch (error) {
+          console.log("[creating mailables error]");
+        }
+      }
 
     }
   }
