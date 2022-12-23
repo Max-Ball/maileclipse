@@ -21,7 +21,7 @@ Route::group(['prefix' => 'mailables'], function () {
     Route::get('edit/template/{name}', 'MailablesController@editMailable')->name('editMailable');
     Route::post('parse/template', 'MailablesController@parseTemplate')->name('parseTemplate');
 
-    Route::get('new', 'MailablesController@createMailable')->name('createMailable');
+    // Route::get('new', 'MailablesController@createMailable')->name('createMailable');
     Route::post('new', 'MailablesController@generateMailable')->name('generateMailable');
     Route::post('delete', 'MailablesController@delete')->name('deleteMailable');
 

@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="px-3 py-3 mt-0">
-        This will be a foreach over each mailable - need to add component
+        This will be a foreach over each mailable - need to add component{{ mailable.data }}
       </div>
     </div>
   </div>
@@ -35,9 +35,10 @@
 
 
 <script>
-import { onMounted } from 'vue';
+import { onMounted, computed } from 'vue';
 import { mailablesService } from '../services/MailableService';
 import MailableModal from '../components/MailableModal.vue';
+import { store } from '../store';
 
 export default {
   setup() {
@@ -53,6 +54,7 @@ export default {
       getAllMailables();
     })
     return {
+      mailable: computed(() => store.mailables)
 
     }
   },
