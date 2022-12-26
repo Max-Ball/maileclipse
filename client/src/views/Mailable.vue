@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="px-3 py-3 mt-0">
-        This will be a foreach over each mailable - need to add component{{ mailable.data }}
+        This will be a foreach over each mailable - need to add component{{ mailable }}
       </div>
     </div>
   </div>
